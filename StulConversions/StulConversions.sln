@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TpsFiles", "TpsFiles\TpsFiles.csproj", "{A3D08189-F898-4B72-AB75-107C2ADE47DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{FEA5B3E5-2699-4C6F-BDDF-944761C49F88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEA5B3E5-2699-4C6F-BDDF-944761C49F88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEA5B3E5-2699-4C6F-BDDF-944761C49F88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3D08189-F898-4B72-AB75-107C2ADE47DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3D08189-F898-4B72-AB75-107C2ADE47DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3D08189-F898-4B72-AB75-107C2ADE47DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3D08189-F898-4B72-AB75-107C2ADE47DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
