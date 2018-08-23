@@ -1,6 +1,6 @@
 ﻿using CsvHelper.Configuration;
 
-namespace TpsFiles
+namespace TpsFiles.TpsParitTxt
 {
     public class TpsParitLine
     {

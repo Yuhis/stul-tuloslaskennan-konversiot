@@ -5,7 +5,7 @@ using System.Text;
 
 namespace StulFiles.StulParitTxt
 {
-    class StulParitReader
+    public class StulParitReader
     {
         private const string DefaultCsvDelimiter = ",";
         private string ParitFileName { get; set; }

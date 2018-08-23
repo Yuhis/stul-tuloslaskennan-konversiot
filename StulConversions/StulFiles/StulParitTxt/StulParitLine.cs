@@ -2,7 +2,7 @@
 using System.Text.RegularExpressions;
 using CsvHelper.Configuration;
 
-namespace StulFiles
+namespace StulFiles.StulParitTxt
 {
     public class StulParitLine
     {
