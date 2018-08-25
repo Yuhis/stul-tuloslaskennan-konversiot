@@ -7,14 +7,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StulFiles", "StulFiles\Stul
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{472358A5-D336-4E30-8C41-33279A4D7E03}"
 	ProjectSection(SolutionItems) = preProject
-		.gitignore = .gitignore
+		..\.gitignore = ..\.gitignore
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TpsFiles", "TpsFiles\TpsFiles.csproj", "{A3D08189-F898-4B72-AB75-107C2ADE47DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TpsFiles", "TpsFiles\TpsFiles.csproj", "{A3D08189-F898-4B72-AB75-107C2ADE47DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StulParitToTpsParitConverter", "StulParitToTpsParitConverter\StulParitToTpsParitConverter.csproj", "{492D5821-3DF7-466A-9F1B-5C440AB4E023}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StulParitToTpsParitConverter", "StulParitToTpsParitConverter\StulParitToTpsParitConverter.csproj", "{492D5821-3DF7-466A-9F1B-5C440AB4E023}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TpsResultsToStulTulosConverter", "TpsResultsToStulTulosConverter\TpsResultsToStulTulosConverter.csproj", "{2A46810F-6C28-4A56-AC5E-6ECE602DA115}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TpsResultsToStulTulosConverter", "TpsResultsToStulTulosConverter\TpsResultsToStulTulosConverter.csproj", "{2A46810F-6C28-4A56-AC5E-6ECE602DA115}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParitTps", "ParitTps\ParitTps.csproj", "{345C16C8-90BB-44E0-B088-CD009263CA50}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{2A46810F-6C28-4A56-AC5E-6ECE602DA115}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A46810F-6C28-4A56-AC5E-6ECE602DA115}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A46810F-6C28-4A56-AC5E-6ECE602DA115}.Release|Any CPU.Build.0 = Release|Any CPU
+		{345C16C8-90BB-44E0-B088-CD009263CA50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{345C16C8-90BB-44E0-B088-CD009263CA50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{345C16C8-90BB-44E0-B088-CD009263CA50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{345C16C8-90BB-44E0-B088-CD009263CA50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

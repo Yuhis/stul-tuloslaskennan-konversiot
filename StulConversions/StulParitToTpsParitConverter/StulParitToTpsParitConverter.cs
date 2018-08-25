@@ -7,8 +7,8 @@ namespace StulParitToTpsParitConverter
 {
     public class StulParitToTpsParitConverter
     {
-        private StulParitReader _stulParitReader;
-        private TpsParitWriter _tpsParitWriter;
+        private readonly StulParitReader _stulParitReader;
+        private readonly TpsParitWriter _tpsParitWriter;
 
         public StulParitToTpsParitConverter(string stulParitFileName, string tpsParitFileName)
         {
@@ -29,7 +29,7 @@ namespace StulParitToTpsParitConverter
             _tpsParitWriter = new TpsParitWriter(tpsParitFileName);
         }
 
-        public void WriteTPSParit()
+        public void WriteTpsParit()
         {
             foreach (StulParitLine pari in _stulParitReader.ParitLines)
             {
