@@ -1,6 +1,7 @@
-﻿using McMaster.Extensions.CommandLineUtils;
+﻿using Converter.StulParitToTpsParit;
+using McMaster.Extensions.CommandLineUtils;
 
-namespace ParitTps
+namespace Program.TpsParit
 {
     class Program
     {
@@ -8,10 +9,12 @@ namespace ParitTps
         {
             var app = new CommandLineApplication
             {
-                Name = "TulosTps",
-                Description = "Konvertoi STUL parit tiedosto TPS muotoon"
+                Name = "TpsParit",
+                Description = "Konvertoi STUL parit tiedoston TPS parit muotoon",
+                ThrowOnUnexpectedArgument = false
             };
-            app.HelpOption(inherited: true);
+            app.HelpOption();
+            app.VersionOption("-v|--version", Program.GetVersion());
 
             var optionParitTxt = app.Option("-p|--parit <parit.txt>", "STUL parit.txt tiedoston nimi", CommandOptionType.SingleValue)
                 .Accepts(v => v.ExistingFile());
@@ -26,12 +29,18 @@ namespace ParitTps
                     ? optionParitTpsTxt.Value()
                     : "parit.tps.txt";
 
-                var program = new StulParitToTpsParitConverter.StulParitToTpsParitConverter(paritTiedosto, paritTpsTiedosto);
+                var program = new StulParitToTpsParit(paritTiedosto, paritTpsTiedosto);
                 program.WriteTpsParit();
                 return 1;
             });
 
             return app.Execute(args);
+        }
+
+        private static string GetVersion()
+        {
+            var version = typeof(Program).Assembly.GetName().Version;
+            return $"{version.Major}.{version.Minor}.{version.Revision}";
         }
     }
 }

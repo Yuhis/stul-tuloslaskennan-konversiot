@@ -2,7 +2,7 @@
 
 namespace StulTulos
 {
-    class Program
+    public class Program
     {
         public static int Main(string[] args)
         {
@@ -11,7 +11,8 @@ namespace StulTulos
                 Name = "StulTulos",
                 Description = "Konvertoi TPS results tiedoston STUL tulos muotoon"
             };
-            app.HelpOption(inherited: true);
+            app.HelpOption();
+            app.VersionOption("-v|--version", Program.GetVersion());
 
             var optionParitTxt = app.Option("-p|--parit <parit.txt>", "STUL parit.txt tiedoston nimi", CommandOptionType.SingleValue)
                 .Accepts(v => v.ExistingFile());
@@ -37,6 +38,12 @@ namespace StulTulos
             });
 
             return app.Execute(args);
+        }
+
+        private static string GetVersion()
+        {
+            var version = typeof(Program).Assembly.GetName().Version;
+            return $"{version.Major}.{version.Minor}.{version.Revision}";
         }
     }
 }

@@ -1,16 +1,16 @@
 ﻿using System;
 using System.IO;
-using StulFiles.StulParitTxt;
-using TpsFiles.TpsParitTxt;
+using Files.Stul.ParitTxt;
+using Files.Tps.ParitTxt;
 
-namespace StulParitToTpsParitConverter
+namespace Converter.StulParitToTpsParit
 {
-    public class StulParitToTpsParitConverter
+    public class StulParitToTpsParit
     {
         private readonly StulParitReader _stulParitReader;
         private readonly TpsParitWriter _tpsParitWriter;
 
-        public StulParitToTpsParitConverter(string stulParitFileName, string tpsParitFileName)
+        public StulParitToTpsParit(string stulParitFileName, string tpsParitFileName)
         {
             // parit.txt tiedosto
             if (!File.Exists(stulParitFileName))
@@ -18,7 +18,7 @@ namespace StulParitToTpsParitConverter
                 Console.WriteLine($"Virhe: Tiedostoa {stulParitFileName} ei löydy.");
                 Environment.Exit(-1);
             }
-            
+
             _stulParitReader = new StulParitReader(stulParitFileName);
             foreach (string e in _stulParitReader.LineErrors)
             {

@@ -5,8 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\StulFiles\StulFiles.csproj" />
-    <ProjectReference Include="..\TpsFiles\TpsFiles.csproj" />
+    <PackageReference Include="CsvHelper" Version="7.1.1" />
   </ItemGroup>
 
 </Project>
