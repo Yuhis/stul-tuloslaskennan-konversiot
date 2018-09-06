@@ -21,20 +21,23 @@ namespace Files.Stul.ParitTxt
 
         private void ReadAll()
         {
-            var inFileStream = File.Open(ParitFileName, FileMode.Open, FileAccess.Read);
-            using (StreamReader stream = new StreamReader(inFileStream, Encoding.UTF8))
+            using (FileStream fs = File.Open(ParitFileName, FileMode.Open, FileAccess.Read))
             {
-                var reader = new CsvReader(stream);
-                reader.Configuration.HasHeaderRecord = false;
-                reader.Configuration.RegisterClassMap<StulParitLineClassMap>();
-
-                var records = reader.GetRecords<StulParitLine>();
-                foreach (StulParitLine pari in records)
+                using (StreamReader stream = new StreamReader(fs, Encoding.UTF8))
                 {
-                    ParitLines.Add(pari);
-                    foreach (string e in pari.Errors)
+                    var reader = new CsvReader(stream);
+                    reader.Configuration.HasHeaderRecord = false;
+                    reader.Configuration.RegisterClassMap<StulParitLineClassMap>();
+                    //reader.Configuration.Encoding = Encoding.UTF8;
+
+                    var records = reader.GetRecords<StulParitLine>();
+                    foreach (StulParitLine pari in records)
                     {
-                        LineErrors.Add(e);
+                        ParitLines.Add(pari);
+                        foreach (string e in pari.Errors)
+                        {
+                            LineErrors.Add(e);
+                        }
                     }
                 }
             }

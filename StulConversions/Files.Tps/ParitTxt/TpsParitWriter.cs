@@ -20,8 +20,7 @@ namespace Files.Tps.ParitTxt
 
         public void WriteAll()
         {
-            var outFileStream = File.Create(ParitFileName);
-            using (StreamWriter stream = new StreamWriter(outFileStream, Encoding.UTF8))
+            using (StreamWriter stream = new StreamWriter(File.Open(ParitFileName, FileMode.Create), Encoding.UTF8))
             {
                 var writer = new CsvWriter(stream);
                 writer.Configuration.Delimiter = DefaultCsvDelimiter;
