@@ -21,14 +21,15 @@ namespace Files.Stul.ParitTxt
 
         private void ReadAll()
         {
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+
             using (FileStream fs = File.Open(ParitFileName, FileMode.Open, FileAccess.Read))
             {
-                using (StreamReader stream = new StreamReader(fs, Encoding.UTF8))
+                using (StreamReader stream = new StreamReader(fs, Encoding.GetEncoding(1252)))
                 {
                     var reader = new CsvReader(stream);
                     reader.Configuration.HasHeaderRecord = false;
                     reader.Configuration.RegisterClassMap<StulParitLineClassMap>();
-                    //reader.Configuration.Encoding = Encoding.UTF8;
 
                     var records = reader.GetRecords<StulParitLine>();
                     foreach (StulParitLine pari in records)
